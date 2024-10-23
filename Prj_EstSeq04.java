@@ -4,7 +4,7 @@
 // Objetivo do programa: Receba a temperatura em graus Celsius. Calcule e mostre a sua temperatura convertida em fahrenheit F = (9*C+160) /5.
 
 package Prj_EstSeq; 
-import java.util.Scanner; 
+import javax.swing.JOptionPane; 
 
 public class Prj_EstSeq04 
 {

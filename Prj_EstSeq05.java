@@ -3,36 +3,23 @@
 // Data: 23/06/24
 // Objetivo do programa: Receba os coeficientes A, B e C de uma equação do 2º grau (AX²+BX+C=0). Calcule e mostre as raízes reais (considerar que a equação possui 2 raízes).
 
-package Prj_EstSeq; // Nome do Pacote.
-import java.util.Scanner; // Biblioteca utilizada (Scanner para coleta de dados do usuário).
+package Prj_EstSeq; 
+import java.util.Scanner; 
 
-public class Prj_EstSeq05 // Nome da classe.
+public class Prj_EstSeq05 
 {
-    public static void main(String [] args) // Programa Principal.
+    public static void main(String [] args) 
     {
-      try(Scanner input = new Scanner(System.in)) // Inicialização do Scanner.
-      {
-          double a; // Coeficiente A.
-          double b; // Coeficiente B.
-          double c; // Coeficiente C.
-          double delta; // Delta para o cálculo de Bhaskara.
-          double raiz; // Resultado do cálculo.
-          
-          System.out.print("Insira o coeficiente A: "); // Imprime tal frase na tela do usuário.
-          a = input.nextDouble(); // Solicita a coleta do valor do coeficiente A.
-          System.out.print("Insira o coeficinete B: "); // Imprime tal frase na tela do usuário.
-          b = input.nextDouble(); // Solicita a coleta do valor do coeficiente B.
-          System.out.print("Insira o coeficiente C: "); // Imprime tal frase na tela do usuário.
-          c = input.nextDouble(); // Solicita a coleta do valor do coeficiente C.
-          
-          delta = (Math.pow(b, 2)) - (4 * a * c); // Cálculo de Delta.
-          
-          raiz = (-b + Math.sqrt(delta)) / (2 * a); // Cálculo da primeira raíz.
-          System.out.println("raiz 1: " + raiz); // Imprime o resultado.
-          
-          raiz = (-b - Math.sqrt(delta)) / (2 * a); // Cálculo da segundo raíz.
-          System.out.println("raiz 2: " + raiz); // Imprime o resultado.
-          
-      }
+        double a, b, c, delta, raiz1, raiz2;
+        
+        a = Double.parseDouble(JOptionPane.showInputDialog("Insira o Coeficiente A: "));
+        b = Double.parseDouble(JOptionPane.showInputDialog("Insira o Coeficiente B: "));
+        c = Double.parseDouble(JOptionPane.showInputDialog("Insira o Coeficiente C: "));
+        
+        delta = (Math.pow(b, 2)) - (4 * a * c);
+        raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+        raiz2 = (-b + Math.sqrt(delta)) / (2 * a);
+        
+        JOptionPane.showMessageDialog(null, "Raíz 1: " + raiz1 + "\nRaíz 2: " + raiz2);
     }
 }

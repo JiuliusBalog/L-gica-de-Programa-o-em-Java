@@ -3,29 +3,22 @@
 // Data: 23/06/24
 // Objetivo do programa: Receba os valores em x e y. Efetua a troca de seus valores e mostre seus conteúdos.
 
-package Prj_EstSeq; // Nome do Pacote
-import java.util.Scanner; // Biblioteca utilizada (Scanner para coleta de dados do usuário).
+package Prj_EstSeq; 
+import java.util.Scanner; 
 
-public class Prj_EstSeq06 // Nome da classe.
+public class Prj_EstSeq06 
 {
-    public static void main (String [] args) // Programa Principal.
+    public static void main (String [] args)
     {
-        try(Scanner input = new Scanner(System.in)) // Inicialização do Scanner
-        {
-            int x; // Variável 1.
-            int y; // Variável 2.
-            int z; // Variável auxiliar para a troca dos valores.
-            
-            System.out.print("Insira o valor X: "); // Imprime tal frase na tela do usuário.
-            x = input.nextInt(); // Solicita a coleta do valor de X. Ex: 2.
-            System.out.print("Insira o valor Y: "); // Imprime tal frase na tela do usuário.
-            y = input.nextInt(); // Solicita a coleta do valor de Y. Ex: 5.
-            
-            z = x; // de 0 passa a ser 2. 
-            x = y; // de 2 passa a ser 5.
-            y = z; // de 5 passa a ser 2
-            
-            System.out.println("O valor de X se tornou: " + x + " enquanto o de Y se tornou: " + y); // Exibe o resultado para o usuário.
-        }
+        int v1, v2, aux = 0;
+        
+        v1 = Integer.parseInt(JOptionPane.showInputDialog("Insira o primeiro valor: "));
+        v2 = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo valor: "));
+        
+        aux = v1;
+        v1 = v2;
+        v2 = aux;
+        
+        JOptionPane.showMessageDialog(null, "Valor 1: " + v1 + "\nValor 2: " + v2);
     }
 }

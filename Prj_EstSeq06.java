@@ -4,7 +4,7 @@
 // Objetivo do programa: Receba os valores em x e y. Efetua a troca de seus valores e mostre seus conteúdos.
 
 package Prj_EstSeq; 
-import java.util.Scanner; 
+import javax.swing.JOptionPane; 
 
 public class Prj_EstSeq06 
 {

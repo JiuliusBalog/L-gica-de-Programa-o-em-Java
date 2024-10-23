@@ -4,7 +4,7 @@
 // Objetivo do programa: Receba os coeficientes A, B e C de uma equação do 2º grau (AX²+BX+C=0). Calcule e mostre as raízes reais (considerar que a equação possui 2 raízes).
 
 package Prj_EstSeq; 
-import java.util.Scanner; 
+import javax.swing.JOptionPane; 
 
 public class Prj_EstSeq05 
 {

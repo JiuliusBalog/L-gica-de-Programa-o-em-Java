@@ -4,35 +4,24 @@
 // Objetivo do programa: Receba o valor de um depósito em poupança. Calcule e mostre o valor após 1 mês de aplicação sabendo que rende 1,3% a. m.
 
 package Prj_EstSeq;
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Prj_EstSeq16
 {
     public static void main (String [] args)
     {
-        try(Scanner input = new Scanner(System.in))
-        {
-            int qh;
-            int nd;
-            double vh;
-            int pd;
-            double salariobruto;
-            double salarioliquido;
+        int qh, nd, pd;
+        double vh, salariobruto, salarioliquido;
+        
+        qh = Integer.parseInt(JOptionPane.showInputDialog("Insira a quantidade de horas trabalhadas: "));   
+        vh = Double.parseDouble(JOptionPane.showInputDialog("Insira o valor por hora: "));   
+        pd = Integer.parseInt(JOptionPane.showInputDialog("Insira o percentual de desconto: "));   
+        nd = Integer.parseInt(JOptionPane.showInputDialog("Insira o nº de dependentes: "));
             
-            System.out.print("Insira a quantidade de horas trabalhadas: ");
-            qh = input.nextInt();
-            System.out.print("Insira o valor por hora trabalhada: ");
-            vh = input.nextDouble();
-            System.out.print("Insira o percentual de desconto: ");
-            pd = input.nextInt();
-            System.out.print("Insira o número de dependentes: ");
-            nd = input.nextInt();
+        salariobruto = qh * vh;
+        salarioliquido = (salariobruto - (salariobruto * pd)/100);
+        salarioliquido = salarioliquido + (nd * 100);
             
-            salariobruto = qh * vh;
-            salarioliquido = (salariobruto - (salariobruto * pd)/100);
-            salarioliquido = salarioliquido + (nd * 100);
-            
-            System.out.println("Salário calculado: " + salarioliquido);
-        }    
+        JOptionPane.showMessageDialog(null, "Salário calculado: " + salarioliquido);    
     }
 }

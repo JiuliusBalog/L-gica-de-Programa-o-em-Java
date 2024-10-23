@@ -4,25 +4,18 @@
 // Objetivo do programa: Receba 2 números reais. Calcule e mostre a diferença desses valores.
 
 package Prj_EstSeq;
-import java.util.Scanner; 
+import javax.swing.JOptionPane; 
 public class Prj_EstSeq10 
 {
     public static void main (String [] args)
     {
-        try(Scanner input = new Scanner(System.in))
-        {
-            int n1;
-            int n2;
-            int dif;
-            
-            System.out.print("Insira o primeiro valor: ");
-            n1 = input.nextInt();
-            System.out.print("Insira o segundo valor: ");
-            n2 = input.nextInt();
-            
-            dif = n1 - n2;
-            
-            System.out.println("Diferença dos valores: " + dif);
-        }
+        int n1, n2, dif;
+        
+        n1 = Integer.parseInt(JOptionPane.showInputDialog("Insira o primeiro valor: "));
+        n2 = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo valor: "));
+        
+        dif = n1 - n2;
+        
+        JOptionPane.showMessageDialog(null, "Diferença: " + dif);
     }
 }
